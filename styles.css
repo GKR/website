@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --sand1: hsl(50, 20%, 99%);
+  --sand2: hsl(60, 7.7%, 97.5%);
+  --sand11: hsl(50, 2.5%, 38%);
+  --sand12: hsl(50, 8%, 12%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sand1: hsl(60, 6%, 9%);
+    --sand2: hsl(60, 1.9%, 10.4%);
+    --sand11: hsl(50, 5%, 68.3%);
+    --sand12: hsl(56, 7%, 93%);
+  }
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  color: var(--sand12);
+  background-color: var(--sand1);
+  line-height: 1.25;
+  margin: 2rem auto;
+  width: 45rem;
+  max-width: 92%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+header {
+  margin-block-end: 2rem;
+}
+
+header h1 {
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  font-weight: 800;
+  margin: 0;
+  margin-block-end: 0.5rem;
+}
+
+header nav ul {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-weight: 500;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.lead {
+  font-size: 1.125em;
+  margin-block-end: 2rem;
+}
+
+main a {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+}
+
+.books {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 1rem;
+}
+
+.books li {
+  position: relative;
+}
+
+.books img {
+  background-color: var(--sand2);
+  max-height: 270px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.books a {
+  text-decoration: none;
+}
+.books a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.books h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.books p {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--sand11);
+}
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    overflow-wrap: break-word;   /* Modern browsers */
+}
+
+
+section {
+  margin-block-end: 1.5rem;
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
